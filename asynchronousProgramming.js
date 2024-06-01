@@ -10,4 +10,6 @@ console.log("I");
 setTimeout(() => {
     console.log("eat"); //1000 is 1 second --> it runs asynchornously
 }, 0);
-console.log("icecream");
+setTimeout(() => {
+    console.log("icecream");
+}, 1000);
