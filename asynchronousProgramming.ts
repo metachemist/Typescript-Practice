@@ -25,25 +25,3 @@
 
 
 
-//ordering pizza
-//callback function --> 
-
-function orderPizza(prepareCB: any){
-    console.log("Placing order");
-
-    setTimeout(() => {
-        console.log("Order placed");
-    }, 3000);
-
-    prepareCB();
-}
-
-function preparePizza(){
-    console.log("Preparing pizza");
-
-    setTimeout(() => {
-        console.log("Pizza is being prepared 🍕")
-    }, 3000);
-}
-
-orderPizza(preparePizza);

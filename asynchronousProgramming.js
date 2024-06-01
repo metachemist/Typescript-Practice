@@ -21,10 +21,25 @@
 //     }, 1000);                                //1000 is 1 second --> it runs asynchornously
 // }, 1000);
 //ordering pizza
-function orderPizza() {
-    console.log("Placing order");
+//callback function --> 
+function orderPizza(prepareCB) {
+    console.log("Placing order..........");
     setTimeout(() => {
         console.log("Order placed");
+        prepareCB();
     }, 3000);
 }
-orderPizza();
+function preparePizza(deliverPizza) {
+    console.log("Preparing pizza.........");
+    setTimeout(() => {
+        console.log("Pizza is being prepared 🍕");
+        deliverPizza();
+    }, 3000);
+}
+function deliverPizza() {
+    console.log("Delivering Pizza.........");
+    setTimeout(() => {
+        console.log("Your Pizza is at your door steps 🍕");
+    }, 3000);
+}
+orderPizza(preparePizza);
