@@ -8,8 +8,7 @@
 
 
 console.log("I");
-console.log("eat");
 setTimeout(() => {
     console.log("eat"); //1000 is 1 second --> it runs asynchornously
-}, 1000);
+}, 0);
 console.log("icecream");
